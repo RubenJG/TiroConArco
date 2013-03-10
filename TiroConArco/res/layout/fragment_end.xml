@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/fragmend_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp" >
+
+        <TextView style="@style/Cell" />
+
+        <TextView style="@style/Cell" />
+
+        <TextView style="@style/Cell" />
+
+        <TextView style="@style/Cell" />
+
+        <TextView style="@style/Cell" />
+
+        <TextView style="@style/Cell" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow style="@style/ScoreTableRow" >
+
+            <Button
+                android:id="@+id/fragment_end_button_x"
+                style="@style/Button"
+                android:tag="X"
+                android:text="@string/fragmend_end_x"
+                android:textColor="@color/Yellow" />
+
+            <Button
+                android:id="@+id/fragment_end_button_10"
+                style="@style/Button"
+                android:tag="10"
+                android:text="@string/fragmend_end_10"
+                android:textColor="@color/Yellow" />
+
+            <Button
+                android:id="@+id/fragment_end_button_9"
+                style="@style/Button"
+                android:tag="9"
+                android:text="@string/fragmend_end_9"
+                android:textColor="@color/Yellow" />
+        </TableRow>
+
+        <TableRow style="@style/ScoreTableRow" >
+
+            <Button
+                android:id="@+id/fragment_end_button_8"
+                style="@style/Button"
+                android:tag="8"
+                android:text="@string/fragmend_end_8"
+                android:textColor="@color/Red" />
+
+            <Button
+                android:id="@+id/fragment_end_button_7"
+                style="@style/Button"
+                android:tag="7"
+                android:text="@string/fragmend_end_7"
+                android:textColor="@color/Red" />
+
+            <Button
+                android:id="@+id/fragment_end_button_6"
+                style="@style/Button"
+                android:tag="6"
+                android:text="@string/fragmend_end_6"
+                android:textColor="@color/Blue" />
+        </TableRow>
+
+        <TableRow style="@style/ScoreTableRow" >
+
+            <Button
+                android:id="@+id/fragment_end_button_5"
+                style="@style/Button"
+                android:tag="5"
+                android:text="@string/fragmend_end_5"
+                android:textColor="@color/Blue" />
+
+            <Button
+                android:id="@+id/fragment_end_button_4"
+                style="@style/Button"
+                android:tag="4"
+                android:text="@string/fragmend_end_4"
+                android:textColor="@color/Black" />
+
+            <Button
+                android:id="@+id/fragment_end_button_3"
+                style="@style/Button"
+                android:tag="3"
+                android:text="@string/fragmend_end_3"
+                android:textColor="@color/Black" />
+        </TableRow>
+
+        <TableRow style="@style/ScoreTableRow" >
+
+            <Button
+                android:id="@+id/fragment_end_button_2"
+                style="@style/Button"
+                android:tag="2"
+                android:text="@string/fragmend_end_2"
+                android:textColor="@color/White" />
+
+            <Button
+                android:id="@+id/fragment_end_button_1"
+                style="@style/Button"
+                android:tag="1"
+                android:text="@string/fragmend_end_1"
+                android:textColor="@color/White" />
+
+            <Button
+                android:id="@+id/fragment_end_button_m"
+                style="@style/Button"
+                android:tag="M"
+                android:text="@string/fragmend_end_m"
+                android:textColor="@color/Green" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

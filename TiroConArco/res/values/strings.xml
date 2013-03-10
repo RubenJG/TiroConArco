@@ -1,5 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TiroConArco</string>
+    <!-- General -->
+    <string name="app_name">Tiro con Arco</string>
+    <string name="about">Acerca de</string>
+
+    <!-- Fragment - About -->
+    <string name="fragment_about_gpl_license">Tiro con Arco  Copyright © 2013  Rubén Jiménez Goñi. This program comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute it under certain conditions. Check http://www.gnu.org/licenses/gpl.html</string>
+    <string name="fragment_about_action_bar">Este programa utiliza ActionBarSherlock realizado por Jake Wharton. Visite: http://actionbarsherlock.com/</string>
+
+    <!-- Fragment - End -->
+    <string name="fragmend_end_x">X</string>
+    <string name="fragmend_end_10">10</string>
+    <string name="fragmend_end_9">9</string>
+    <string name="fragmend_end_8">8</string>
+    <string name="fragmend_end_7">7</string>
+    <string name="fragmend_end_6">6</string>
+    <string name="fragmend_end_5">5</string>
+    <string name="fragmend_end_4">4</string>
+    <string name="fragmend_end_3">3</string>
+    <string name="fragmend_end_2">2</string>
+    <string name="fragmend_end_1">1</string>
+    <string name="fragmend_end_m">M</string>
+    
+    <!-- Activity - Score -->
+    <string name="activity_score_title">Puntaje</string>
+    
+    
 
 </resources>
