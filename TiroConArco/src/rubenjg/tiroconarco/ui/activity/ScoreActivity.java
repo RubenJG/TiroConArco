@@ -21,8 +21,10 @@ package rubenjg.tiroconarco.ui.activity;
 import rubenjg.tiroconarco.R;
 import rubenjg.tiroconarco.ui.fragment.AboutFragment;
 import rubenjg.tiroconarco.ui.fragment.EndFragment;
+import rubenjg.tiroconarco.util.Score;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -39,7 +41,9 @@ public class ScoreActivity extends SherlockFragmentActivity {
 
 	private static final String ABOUT_TAG = "ABOUT_TAG";
 	private static final String END_TAG = "END_TAG";
-	
+
+	private TextView matrix[][] = new TextView[6][6];
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -50,19 +54,18 @@ public class ScoreActivity extends SherlockFragmentActivity {
 
 		// Se le insertan las filas y columnas respectivas
 		for (int i = 0; i < 6; ++i) {
+			// Se crea la columna
 			getLayoutInflater().inflate(R.layout.view_score_table_row, table);
 			TableRow row = (TableRow) table.getChildAt(i);
+			// Se crea un OnClickListener para todas las celdas de la fila
+			OnClickListener listener = new OnClickListenerImplementation(i);
+			// Se crea cada celda
 			for (int j = 0; j < 6; ++j) {
 				getLayoutInflater().inflate(R.layout.view_cell, row);
 				TextView cell = (TextView) row.getChildAt(j);
 				cell.setTextColor(getResources().getColor(R.color.Yellow));
-				cell.setOnClickListener(new View.OnClickListener() {
-					
-					@Override
-					public void onClick(View v) {
-						EndFragment.newInstance().show(getSupportFragmentManager(), END_TAG);
-					}
-				});
+				cell.setOnClickListener(listener);
+				matrix[i][j] = cell;
 			}
 		}
 	}
@@ -84,5 +87,46 @@ public class ScoreActivity extends SherlockFragmentActivity {
 			eventResolved = false;
 		}
 		return eventResolved;
+	}
+
+	/**
+	 * Callback para el fragmento, con este puede asignar los puntajes al lugar
+	 * correspondiente en la matriz
+	 * 
+	 * @param i
+	 *            Indice de la fila
+	 * @param j
+	 *            Indice de la columna
+	 * @param score
+	 *            Puntaje
+	 */
+	public void setScore(int i, int j, String score) {
+		int color = Score.newInstance(getApplicationContext()).getColor(score);
+		matrix[i][j].setText(score);
+		if (color != 0) {
+			matrix[i][j].setTextColor(color);
+		}
+	}
+
+	private final class OnClickListenerImplementation implements
+			View.OnClickListener {
+
+		private int rowNumber;
+
+		/**
+		 * Constructor
+		 * 
+		 * @param row
+		 *            Número de fila
+		 */
+		public OnClickListenerImplementation(int row) {
+			this.rowNumber = row;
+		}
+
+		@Override
+		public void onClick(View v) {
+			EndFragment.newInstance(ScoreActivity.this, rowNumber).show(
+					getSupportFragmentManager(), END_TAG);
+		}
 	}
 }

@@ -7,14 +7,14 @@
 
     <style name="Cell">
         <item name="android:ems">2</item>
-        <item name="android:padding">3dp</item>
+        <item name="android:padding">4dp</item>
         <item name="android:background">@color/Gray</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">3dp</item>
         <item name="android:gravity">center</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">26sp</item>
+        <item name="android:textSize">@dimen/large_text</item>
     </style>
 
     <style name="SmallLetter">
@@ -22,7 +22,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:maxLines">6</item>
         <item name="android:padding">10dp</item>
-        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+        <item name="android:textSize">@dimen/small_text</item>
     </style>
 
     <style name="ScoreTableLayout">
@@ -38,9 +38,11 @@
     </style>
 
     <style name="Button">
+        <item name="android:ems">3</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/medium_text</item>
     </style>
 
 </resources>
